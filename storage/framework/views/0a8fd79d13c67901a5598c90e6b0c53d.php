@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Title -->
+    <title>Data pembeli</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="hadziq ishamy">
+    <meta name="robots" content="">
+
+
+    <!-- Mobile Specific -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="https://unibamadura.ac.id/page/images/profil/1.png">
+    <link rel="stylesheet" href="<?php echo e(asset('')); ?>assets/vendor/chartist/css/chartist.min.css">
+    <link href="<?php echo e(asset('')); ?>assets/vendor/bootstrap-select/css/bootstrap-select.min.css" rel="stylesheet">
+    <link href="<?php echo e(asset('')); ?>assets/vendor/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="<?php echo e(asset('')); ?>assets/css/style.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&amp;family=Roboto:wght@100;300;400;500;700;900&amp;display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader" style="display: none;">
+        <div class="sk-three-bounce">
+            <div class="sk-child sk-bounce1"></div>
+            <div class="sk-child sk-bounce2"></div>
+            <div class="sk-child sk-bounce3"></div>
+        </div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+
+
+
+
+    <div id="main-wrapper" class="show">
+
+        <!--**********************************
+            Nav header start
+        ***********************************-->
+        <div class="nav-header">
+            <a href="index.html" class="brand-logo" aria-label="Gymove">
+                <img class="logo-abbr" width="50" src="https://unibamadura.ac.id/page/images/profil/1.png"
+                    alt="">
+
+
+                <h4 class="logo-compact mt-2">Informatika <span style="font-size: 10px">Uniba Madura</span>
+                </h4>
+                <h4 class="brand-title mt-2">Informatika <span style="font-size: 10px">Uniba Madura </span>
+                </h4>
+            </a>
+
+            <div class="nav-control">
+                <div class="hamburger">
+                    <span class="line"></span><span class="line"></span><span class="line"></span>
+                </div>
+            </div>
+        </div>
+        <!--**********************************
+            Nav header end
+        ***********************************-->
+
+
+        <!--**********************************
+            Header start
+        ***********************************-->
+        <header class="header">
+            <div class="header-content">
+                <nav class="navbar navbar-expand">
+                    <div class="collapse navbar-collapse justify-content-between">
+                        <div class="header-left">
+                            <div class="dashboard_bar">
+                                Dashboard
+                            </div>
+                        </div>
+                        <ul class="navbar-nav header-right">
+
+
+
+                            <li class="nav-item dropdown header-profile">
+                                <a class="nav-link" href="javascript:void(0)" role="button" data-bs-toggle="dropdown">
+                                    <img src="http://127.0.0.1:8000/foto/yosi.jpg" width="20" alt="">
+                                    <div class="header-info">
+                                        <span class="text-black"><strong>Admin</strong></span>
+                                        <p class="fs-12 mb-0">admin@gmail.com</p>
+                                    </div>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <a href="/setting" class="dropdown-item ai-icon">
+                                        <svg id="icon-user1" xmlns="http://www.w3.org/2000/svg" class="text-primary"
+                                            width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                            <circle cx="12" cy="7" r="4"></circle>
+                                        </svg>
+                                        <span class="ms-2">Profile </span>
+                                    </a>
+                                    <a href="/logout" class="dropdown-item ai-icon">
+                                        <svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" class="text-danger"
+                                            width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                                            <polyline points="16 17 21 12 16 7"></polyline>
+                                            <line x1="21" y1="12" x2="9" y2="12">
+                                            </line>
+                                        </svg>
+                                        <span class="ms-2">Logout </span>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!--**********************************
+            Header end ti-comment-alt
+        ***********************************-->
+
+        <!--**********************************
+            Sidebar start
+        ***********************************-->
+        <div class="deznav">
+            <div class="deznav-scroll mm-active">
+                <ul class="metismenu mm-show" id="menu">
+                    <li class=""><a href="/dashboard" class="ai-icon mm-active" aria-expanded="false">
+                            <i class="flaticon-381-networking"></i>
+                            <span class="nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li><a href="/aset" class="ai-icon" aria-expanded="false">
+                            <i class="flaticon-381-notepad"></i>
+                            <span class="nav-text">Data aset</span>
+                        </a>
+                    </li>
+                    <li><a href="/pembeli" class="ai-icon" aria-expanded="false">
+                            <i class="flaticon-381-television"></i>
+                            <span class="nav-text">Data pembeli</span>
+                        </a>
+                    </li>
+                    <li><a href="data_operator.php" class="ai-icon" aria-expanded="false">
+                            <i class="flaticon-381-settings-2"></i>
+                            <span class="nav-text">Operator Sistem</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="add-menu-sidebar">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1053/1053210.png" width="50" alt=""
+                        class="me-3">
+                    <a href="/agenda" class="font-w500 mb-0">Logout</a>
+                </div>
+                <div class="copyright">
+                    <p><strong>T2S System</strong> © 2023 All Rights Reserved</p>
+                    <p>Made with <span class="heart"></span> by Yosi Bagus</p>
+                </div>
+            </div>
+        </div>
+        <!--**********************************
+            Sidebar end
+        ***********************************-->
+
+
+        <!--**********************************
+            Content body start
+        ***********************************-->
+        <div class="content-body default-height">
+
+            <div class="container-fluid">
+                <?php echo $__env->yieldContent('content'); ?>
+
+            </div>
+        </div>
+        <!--**********************************
+            Content body end
+        ***********************************-->
+
+
+
+        <!--**********************************
+            Footer start
+        ***********************************-->
+        <footer class="footer">
+            <div class="copyright">
+                <p>Copyright © Designed &amp; Developed by <a href="http://yosibgsdr.site/" target="_blank">Yosi
+                        Bagus</a> 2023</p>
+            </div>
+        </footer>
+        <!--**********************************
+            Footer end
+        ***********************************-->
+    </div>
+    <!--**********************************
+        Main wrapper end
+
+        ***********************************-->
+		<?php if(session('success')): ?>
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+            <div class="toast show bg-white" role="alert" aria-live="assertive">
+                <div class="toast-header border-color">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="green">
+                        <path
+                            d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11.0026 16L6.75999 11.7574L8.17421 10.3431L11.0026 13.1716L16.6595 7.51472L18.0737 8.92893L11.0026 16Z">
+                        </path>
+                    </svg>
+                    <strong class="me-auto fs-18 fw-bold text-dark" style="padding-left: 10px">Sukses</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                    <?php echo e(session('success')); ?>
+
+                </div>
+            </div>
+        </div>
+    <?php endif; ?>
+    <!-- Required vendors -->
+    <script src="<?php echo e(asset('')); ?>assets/vendor/global/global.min.js"></script>
+    <script src="<?php echo e(asset('')); ?>assets/vendor/chart-js/chart.bundle.min.js"></script>
+    <script src="<?php echo e(asset('')); ?>assets/vendor/owl-carousel/owl.carousel.js"></script>
+    <!-- Chart piety plugin files -->
+    <script src="<?php echo e(asset('')); ?>assets/vendor/peity/jquery.peity.min.js"></script>
+
+    <!-- Apex Chart -->
+    <script src="<?php echo e(asset('')); ?>assets/vendor/apexchart/apexchart.js"></script>
+
+    <!-- Datatable -->
+    <script src="<?php echo e(asset('')); ?>assets/vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <!-- Dashboard 1 -->
+    <script src="<?php echo e(asset('')); ?>assets/js/dashboard/dashboard-1.js"></script>
+
+    <script src="<?php echo e(asset('')); ?>assets/js/plugins-init/datatables.init.js"></script>
+    <script src="<?php echo e(asset('')); ?>assets/js/custom.min.js"></script>
+    <script src="<?php echo e(asset('')); ?>assets/js/deznav-init.js"></script>
+    <script>
+        (function() {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script>
+
+
+</body>
+
+</html>
+<?php /**PATH C:\laragon\www\finalprojectwebdavi\resources\views/layout/template.blade.php ENDPATH**/ ?>
